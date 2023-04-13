@@ -8,4 +8,10 @@ public class DirectorEmpleado  implements Empleado {
 		return "Hola soy el Director";
 	}
 
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informe del Director";
+	}
+
 }

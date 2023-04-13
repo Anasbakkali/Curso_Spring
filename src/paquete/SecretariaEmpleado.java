@@ -8,4 +8,10 @@ public class SecretariaEmpleado implements Empleado {
 		return "Hola soy la Secretaria";
 	}
 
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informe de la Secretaria";
+	}
+
 }
