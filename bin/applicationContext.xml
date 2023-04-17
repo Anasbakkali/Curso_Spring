@@ -8,6 +8,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
+<context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
 
 <!-- Creación de la dependecia -->
 <bean id="miInforme" class="paquete.Informes"></bean>
@@ -16,12 +17,17 @@
 
 <bean id="miEmpleado" class="paquete.JefeEmpleado">
 	<constructor-arg ref="miInforme"></constructor-arg>
-
+	<property name="nombreEmpresa" value="Empresa B"></property>
+	
 </bean>
 
 
 <bean id="miSecretarioEmpleado" class="paquete.SecretariaEmpleado">
 	<property name="nuevoInforme" ref="miInforme"></property>
+	
+	<property name="email" value="${email}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa} "></property>
+	
 
 </bean>
 

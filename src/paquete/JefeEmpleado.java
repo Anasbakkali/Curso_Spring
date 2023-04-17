@@ -3,7 +3,22 @@ package paquete;
 public class JefeEmpleado implements Empleado {
 
 	private Creacion_Informes nuevoInforme;
+	private String email;
+	private String nombreEmpresa;
 	
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
 	public JefeEmpleado(Creacion_Informes nuevoInforme) {
 		this.nuevoInforme=nuevoInforme;
 	}

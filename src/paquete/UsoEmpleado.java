@@ -18,11 +18,12 @@ public class UsoEmpleado {
 		
 		System.out.println(juan.get_datos());
 		System.out.println(juan.getInforme());*/
-		Empleado maria =  contexto.getBean("miSecretarioEmpleado",Empleado.class);
+		SecretariaEmpleado maria =  contexto.getBean("miSecretarioEmpleado",SecretariaEmpleado.class);
 		
 		System.out.println(maria.get_datos());
 		System.out.println(maria.getInforme());
-		
+		System.out.println(maria.getEmail());
+		System.out.println(maria.getNombreEmpresa());
 		contexto.close();
 	
 	}
