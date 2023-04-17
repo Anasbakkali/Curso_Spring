@@ -1,5 +1,6 @@
 package paquete;
 
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UsoEmpleado {
@@ -12,11 +13,15 @@ public class UsoEmpleado {
 			//System.out.println(empleado1.get_datos());
 		
 		ClassPathXmlApplicationContext contexto = new  ClassPathXmlApplicationContext("applicationContext.xml");
-		
+		/*
 		Empleado juan =  contexto.getBean("miEmpleado",Empleado.class);
 		
 		System.out.println(juan.get_datos());
-		System.out.println(juan.getInforme());
+		System.out.println(juan.getInforme());*/
+		Empleado maria =  contexto.getBean("miSecretarioEmpleado",Empleado.class);
+		
+		System.out.println(maria.get_datos());
+		System.out.println(maria.getInforme());
 		
 		contexto.close();
 	

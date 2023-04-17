@@ -12,8 +12,16 @@
 <!-- Creación de la dependecia -->
 <bean id="miInforme" class="paquete.Informes"></bean>
 
+<!--Inyeccion de dependecia con un contructor -->
+
 <bean id="miEmpleado" class="paquete.JefeEmpleado">
 	<constructor-arg ref="miInforme"></constructor-arg>
+
+</bean>
+
+
+<bean id="miSecretarioEmpleado" class="paquete.SecretariaEmpleado">
+	<property name="nuevoInforme" ref="miInforme"></property>
 
 </bean>
 
